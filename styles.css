@@ -8,6 +8,11 @@ body {
     margin: 0;
 }
 
+.pdf {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
 .btn-fancy {
     padding: 10px 20px;
     font-size: 16px;
@@ -36,6 +41,10 @@ body {
     justify-content: center;
     align-items: center;
     animation: fadeIn 0.5s;
+}
+
+#pdf-full{
+    background-color: white;
 }
 
 @keyframes fadeIn {
@@ -93,6 +102,26 @@ body {
 
 #fullscreen-btn:hover {
     background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+#close-fullscreen-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10000; /* memastikan tombol berada di atas elemen lain */
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#close-fullscreen-btn:hover {
+    background-color: #c0392b;
     transform: translateY(-2px);
 }
 
