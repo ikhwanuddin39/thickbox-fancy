@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Thickbox PDF Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="open-thickbox" class="btn-fancy">Open PDF</button>
+
+    <div id="thickbox" class="hidden">
+        <div class="thickbox-content">
+            <span id="close-thickbox">&times;</span>
+            <embed id="pdf-embed" src="your-document.pdf" type="application/pdf">
+            <button id="fullscreen-btn" class="btn-fancy">Fullscreen</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
