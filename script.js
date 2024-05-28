@@ -41,3 +41,12 @@ document.getElementById('close-fullscreen-btn').addEventListener('click', functi
     embed.classList.add('hidden');
 });
 
+// check if not in fullscreen mode add hidden class on close-fullscreen-btn
+document.addEventListener('fullscreenchange', function() {
+    const embed = document.getElementById('pdf-full');
+    if (!document.fullscreenElement) {
+        embed.classList.add('hidden');
+    }
+});
+
+
