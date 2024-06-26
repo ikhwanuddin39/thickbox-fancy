@@ -128,3 +128,7 @@ body {
 .hidden {
     display: none;
 }
+
+a{
+    pointer-events:none;
+}

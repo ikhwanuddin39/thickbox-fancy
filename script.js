@@ -1,4 +1,4 @@
-document.getElementById('open-thickbox').addEventListener('click', function() {
+document.getElementById('attachment_1102').addEventListener('click', function() {
     document.getElementById('thickbox').style.display = 'flex';
 });
 
