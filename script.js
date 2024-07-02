@@ -1,30 +1,26 @@
-document.getElementById('attachment_1102').addEventListener('click', function() {
-    document.getElementById('thickbox').style.display = 'flex';
-});
+const wpCaptions = document.querySelectorAll('.wp-caption');
 
-document.getElementById('close-thickbox').addEventListener('click', function() {
-    document.getElementById('thickbox').style.display = 'none';
-});
+wpCaptions.forEach(function(wpCaption) {
+    // get a href link of wp-caption
+    wpCaption.addEventListener('click', function() {
+        // embed pdf by a href link of wp-caption
+        const pdfLink = wpCaption.querySelector('a').href;
+        const embedFull = document.getElementById('pdf-full-embed');
+        embedFull.src = pdfLink;
 
-window.addEventListener('click', function(event) {
-    if (event.target === document.getElementById('thickbox')) {
-        document.getElementById('thickbox').style.display = 'none';
-    }
-});
-
-document.getElementById('fullscreen-btn').addEventListener('click', function() {
-    console.log('Fullscreen button clicked'); // Debugging log
-    const embed = document.getElementById('pdf-full');
-    if (embed.requestFullscreen) {
-        embed.requestFullscreen();
-    } else if (embed.mozRequestFullScreen) { // Firefox
-        embed.mozRequestFullScreen();
-    } else if (embed.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-        embed.webkitRequestFullscreen();
-    } else if (embed.msRequestFullscreen) { // IE/Edge
-        embed.msRequestFullscreen();
-    }
-    embed.classList.remove('hidden');
+        // show full screen thickbox
+            const embed = document.getElementById('pdf-full');
+            if (embed.requestFullscreen) {
+                embed.requestFullscreen();
+            } else if (embed.mozRequestFullScreen) { // Firefox
+                embed.mozRequestFullScreen();
+            } else if (embed.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                embed.webkitRequestFullscreen();
+            } else if (embed.msRequestFullscreen) { // IE/Edge
+                embed.msRequestFullscreen();
+            }
+            embed.classList.remove('hidden');
+    });
 });
 
 document.getElementById('close-fullscreen-btn').addEventListener('click', function() {
